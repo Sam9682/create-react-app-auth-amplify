@@ -19,8 +19,21 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
+    <title>Mairie App</title>
+		<script>
+			function myFunction() {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("my-demo").innerHTML = this.responseText;
+					}
+				};
+				xhttp.open("GET", "https://mxzaxnlhe9.execute-api.eu-west-1.amazonaws.com/default/MyLambda2", true);
+				xhttp.send();
+
+			}
+		</script>
+		</head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
@@ -36,5 +49,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+ 	<h1>Mairie de Pont Scorff <span id="my-demo">Saisie des temps de travail !</span></h1>
+		<button onclick="myFunction()">Cliquez ici pour enregistrer une arrivée</button>
+
   </body>
 </html>

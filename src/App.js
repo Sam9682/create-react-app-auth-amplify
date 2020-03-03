@@ -11,21 +11,6 @@ class App extends Component {
     return (
       <div className="App">
 
-		<script>
-			function myFunction() {
-				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-					document.getElementById("my-demo").innerHTML = this.responseText;
-					}
-				};
-				xhttp.open("GET", "https://mxzaxnlhe9.execute-api.eu-west-1.amazonaws.com/default/MyLambda2", true);
-				xhttp.send();
-
-			}
-		</script>
-
-
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -37,8 +22,6 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-		<h1>Mairie de Pont Scorff <span id="my-demo">Saisie des temps de travail !</span></h1>
-		<button onclick="myFunction()">Cliquez ici pour enregistrer une arrivée</button>
           </a>
         </header>
       </div>
